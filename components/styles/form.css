@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+#form_box{
+    width: 500px;
+    height: max-content;
+    background-color: #f3f7f9;
+}
+#first{
+    display: flex;
+}
+.forms{
+    display: none;
+    padding: 10px;
+}
+#form_buttons{
+    display: flex;
+    justify-content: space-around;
+}
+#form_buttons :first-child {
+    background-color: #337ab7;
+}
+.btns{
+    text-align: center;
+    background-color: #dad3d3;
+    width: 200px;
+    height: 35px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.form_input{
+    width: 300px;
+    height: 30px;
+    border: 1px #6c757d solid;
+    border-radius: 2px;
+    border-color: rgb(222, 213, 213);
+}
+.form_text{
+    display: inline-block;
+    width: 100px;
+    margin-right: 50px;
+}
+#btn_pn{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.btn_pn{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    background-color: #545b62;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+#progress{
+    padding: 10px;
+}
+#text{
+    text-align: center;
+    padding: 5px;
+}
