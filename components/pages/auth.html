@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <title>Log In</title>
+</head>
+
+<body>
+    <div id="auth_box">
+        <div id="auth_form">
+            <div id="auth_form_home">
+                <div id="logo">Logo</div>
+                <div id="auth_form_cont">
+                    <div id="auth_nav">
+                        <div class="nav_item" id="nav_item_def">Log In</div>
+                        <div class="nav_item">Sign Up</div>
+                        <hr>
+                    </div>
+                    <div id="form_block_login">
+                        <p>Enter your email address and password to access account.</p>
+                        <form id="form_log_in">
+                            <p>Email address</p>
+                            <input type="email" class="input" placeholder="Enter your email">
+                            <div id="pass_text">
+                                <p>Password</p>
+                                <div id="pass_forgot">Forgot your password?</div>
+                            </div>
+                            <input type="password" class="input" placeholder="Enter your password" autocomplete="off">
+                            <label><input type="checkbox" class="input_check">Remember me</label>
+                            <button type="submit" id="submit_login" class="submit">Log In</button>
+                        </form>
+                        <div class="center">
+                            <p>Sign in with</p>
+                            <a href=""><img src="../images/fb.png" class="icons"></a>
+                            <a href=""><img src="../images/gmail.png" class="icons"></a>
+                            <a href=""><img src="../images/twitter.png" class="icons"></a>
+                            <a href=""><img src="../images/github.png" class="icons"></a>
+                        </div>
+                        <div id="copy_text_login" class="center">2021 © lorem lorem</div>
+                    </div>
+                    <div id="form_block_signup">
+                        <p>Don't have an account? Create your account, it takes less than a minute</p>
+                        <form id="form_login">
+                            <p>Full Name</p>
+                            <input type="text" class="input" placeholder="Enter your name">
+                            <p>Email address</p>
+                            <input type="email" class="input" placeholder="Enter your email">
+                            <p>Password</p>
+                            <input type="password" class="input" placeholder="Enter your password" autocomplete="off">
+                            <label><input type="checkbox" class="input_check">I accept Terms and Conditions</label>
+                            <button type="submit" id="submit_signup" class="submit">Sign Up</button>
+                        </form>
+                        <div class="center">
+                            <p>Sign up with</p>
+                            <a href=""><img src="../images/fb.png" class="icons"></a>
+                            <a href=""><img src="../images/gmail.png" class="icons"></a>
+                            <a href=""><img src="../images/twitter.png" class="icons"></a>
+                            <a href=""><img src="../images/github.png" class="icons"></a>
+                        </div>
+                        <div id="copy_text" class="center">2021 © lorem lorem</div>
+                    </div>
+                </div>
+            </div>
+            <div id="pass_cont">
+                <h2>Recover Password</h2>
+                <p>Enter your email address and we'll send you an email with instructions to reset your password.</p>
+                <div id="form_forgot">
+                    <form action="" name="form_reset">
+                        <p>Email address</p>
+                        <input type="email" name="email_reset" class="input" placeholder="Enter your email">
+                        <button id="submit_reset" class="submit">Reset Password</button>
+                    </form>
+                </div>
+            </div>
+            <div id="pass_success"></div>
+            <div id="pass_rec_footer">2021 © lorem lorem</div>
+            <div id="back_btn_box">
+                Back to
+                <div id="back_btn">Login</div>
+            </div>
+        </div>
+        <div id="auth_img">
+            <div id="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde, voluptatum sed labore
+                praesentium quasi vero delectus ducimus ex corporis reiciendis sapiente mollitia, tempore amet pariatur
+                animi ipsum! Animi, recusandae?
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/auth.js"></script>
+</body>
+
+</html>
