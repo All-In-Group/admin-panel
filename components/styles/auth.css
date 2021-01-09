@@ -20,12 +20,13 @@ body{
 #auth_form{
     width: 30%;
     color:#98a6ad;
+    max-height: 800px;
 }
 #auth_form_home{
-    padding: 10px;
+    padding: 10px 10px 0 10px;
 }
 #auth_form_cont{
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     margin-top: 50px;
     height: 100%;
 }
