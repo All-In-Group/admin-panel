@@ -119,6 +119,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 30px;
+    min-height: 700px;
 }
 #back_btn{
     display: inline-block;
