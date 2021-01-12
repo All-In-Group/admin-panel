@@ -21,14 +21,15 @@
                     </div>
                     <div id="form_block_login">
                         <p>Enter your email address and password to access account.</p>
-                        <form id="form_log_in">
+                        <form id="form_log_in" name="form_log_in">
                             <p>Email address</p>
-                            <input type="email" class="input" placeholder="Enter your email">
+                            <input type="email" class="input" placeholder="Enter your email" name="email" required>
                             <div id="pass_text">
                                 <p>Password</p>
                                 <div id="pass_forgot">Forgot your password?</div>
                             </div>
-                            <input type="password" class="input" placeholder="Enter your password" autocomplete="off">
+                            <input type="password" class="input" placeholder="Enter your password" name="pass"
+                                autocomplete="off" required>
                             <label><input type="checkbox" class="input_check">Remember me</label>
                             <button type="submit" id="submit_login" class="submit">Log In</button>
                         </form>
@@ -43,14 +44,16 @@
                     </div>
                     <div id="form_block_signup">
                         <p>Don't have an account? Create your account, it takes less than a minute</p>
-                        <form id="form_login">
+                        <form id="form_sign_up" name="form_sign_up">
                             <p>Full Name</p>
-                            <input type="text" class="input" placeholder="Enter your name">
+                            <input type="text" class="input" placeholder="Enter your name" name="name">
                             <p>Email address</p>
-                            <input type="email" class="input" placeholder="Enter your email">
+                            <input type="email" class="input" placeholder="Enter your email" name="email">
                             <p>Password</p>
-                            <input type="password" class="input" placeholder="Enter your password" autocomplete="off">
-                            <label><input type="checkbox" class="input_check">I accept Terms and Conditions</label>
+                            <input type="password" class="input" placeholder="Enter your password" autocomplete="off"
+                                name="pass">
+                            <label><input type="checkbox" class="input_check" name="terms">I accept Terms and
+                                Conditions</label>
                             <button type="submit" id="submit_signup" class="submit">Sign Up</button>
                         </form>
                         <div class="center">
