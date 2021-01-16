@@ -106,10 +106,20 @@ document.querySelectorAll(".language_item").forEach(item => {
 
 //user
 
-document.querySelector("#user_demo").addEventListener("click", e => {
-    document.querySelector("#user_demo_list").classList.toggle("show");
-    document.querySelector("#user_demo_list").style.top = `${document.querySelector("#user_demo").offsetTop + document.querySelector("#user_demo").offsetWidth / 2}px`;
-    document.querySelector("#user_demo_list").style.left = `${document.querySelector("#user_demo").offsetLeft - document.querySelector("#user_demo").offsetHeight / 2}px`;
+document.querySelector("#user_demo").addEventListener("click", () => {
+
+    let user_demo = document.querySelector("#user_demo");
+    let user_demo_list = document.querySelector("#user_demo_list");
+
+    user_demo_list.classList.toggle("show");
+    user_demo_list.style.top = `${user_demo.offsetTop + user_demo.offsetWidth / 2}px`;
+    user_demo_list.style.left = `${user_demo.offsetLeft - user_demo.offsetHeight / 2}px`;
+    console.log(user_demo.classList.contains("show"));
+    if (user_demo_list.classList.contains("show")) {
+        user_demo.querySelector(".fas").classList.replace("fa-caret-down", "fa-caret-up");
+    } else {
+        user_demo.querySelector(".fas").classList.replace("fa-caret-up", "fa-caret-down");
+    }
 }, false);
 
 window.onclick = function (event) {
@@ -118,5 +128,6 @@ window.onclick = function (event) {
     }
     if (!(event.target.matches("#user_demo") || event.target.matches("#user_name") || event.target.matches("#user_image"))) {
         document.querySelector("#user_demo_list").classList.remove("show");
+        document.querySelector("#user_demo").querySelector(".fas").classList.replace("fa-caret-up", "fa-caret-down");
     }
 }
