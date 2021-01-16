@@ -10,8 +10,10 @@ html, body{
     body #nav_container{
         flex-flow: column;
     }
-
   }
+a:active{
+    color:#4a3bc9;
+}
 #header{
     display: flex;
     flex-flow: row nowrap;
