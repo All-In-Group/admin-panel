@@ -104,7 +104,7 @@ document.querySelectorAll(".language_item").forEach(item => {
     });
 });
 
-//user
+//user head
 
 document.querySelector("#user_demo").addEventListener("click", () => {
 
@@ -121,11 +121,65 @@ document.querySelector("#user_demo").addEventListener("click", () => {
     }
 }, false);
 
+//user edit
+
+document.querySelector("#edit_head").parentElement.addEventListener("click", () => {
+    document.querySelector("#user_edit_form").style.display = "none";
+    document.querySelector("#main_content").style.display = "flex";
+    document.querySelector("#user_edit_box").style.display = "block";
+    document.querySelector("#user_info_edit_btn").textContent = "Update";
+    document.querySelector("#user_info_close_btn").textContent = "Close";
+});
+
+document.querySelector("#user_info_close_btn").addEventListener("click", e => {
+    if (e.target.textContent == "Close") {
+        document.querySelector("#main_content").style.display = "none";
+        document.querySelector("#user_info_close_btn").textContent = "Back";
+    }
+    else if (e.target.textContent == "Back") {
+        document.querySelector("#user_edit_form").style.display = "none";
+        document.querySelector("#user_edit_box").style.display = "block";
+        document.querySelector("#user_info_close_btn").textContent = "Close";
+        document.querySelector("#user_info_edit_btn").textContent = "Update";
+    }
+});
+
+document.querySelector("#user_info_edit_btn").addEventListener("click", e => {
+    if (e.target.textContent == "Update") {
+        document.querySelector("#user_info_close_btn").textContent = "Back";
+        document.querySelector("#user_info_edit_btn").textContent = "Save";
+        document.querySelector("#user_edit_box").style.display = "none";
+        document.querySelector("#user_edit_form").style.display = "flex";
+    }
+    else if (e.target.textContent == "Save") {
+        let newName = document.forms.edit_info.name.value;
+        let newSurname = document.forms.edit_info.surname.value;
+        let newEmail = document.forms.edit_info.email.value;
+        let newAddress = document.forms.edit_info.address.value;
+        let newPhone = document.forms.edit_info.phone.value;
+
+        document.querySelector("#user_edit_form").style.display = "none";
+        document.querySelector("#user_edit_box").style.display = "block";
+
+        document.querySelector("#user_info_close_btn").textContent = "Close";
+        document.querySelector("#user_info_edit_btn").textContent = "Update";
+
+        document.querySelector("#user_name").textContent = newName;
+        document.querySelector("#user_surname").textContent = newSurname;
+        document.querySelector("#user_email").textContent = newEmail;
+        document.querySelector("#user_address").textContent = newAddress;
+        document.querySelector("#user_phone").textContent = newPhone;
+    }
+
+});
+
+// all 
+
 window.onclick = function (event) {
     if (!event.target.matches("#language")) {
         document.querySelector("#language_list").classList.remove("show");
     }
-    if (!(event.target.matches("#user_demo") || event.target.matches("#user_name") || event.target.matches("#user_image"))) {
+    if (!(event.target.matches("#user_demo") || event.target.matches("#user_name_head") || event.target.matches("#user_image_head"))) {
         document.querySelector("#user_demo_list").classList.remove("show");
         document.querySelector("#user_demo").querySelector(".fas").classList.replace("fa-caret-up", "fa-caret-down");
     }
