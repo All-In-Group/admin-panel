@@ -6,7 +6,12 @@ body{
     height: 100%;
     width: 100%;
 }
+@media (max-width: 1024px) {
+    body #nav_container{
+        flex-flow: column;
+    }
 
+  }
 #header{
     display: flex;
     flex-flow: row nowrap;
@@ -26,6 +31,7 @@ body{
     background-color: rgb(147, 151, 147);
     text-align: center;
     color:white;
+    cursor: pointer;
 }
 #left_nav{
     width: 50%;
@@ -52,7 +58,14 @@ body{
     border: none;
     font-size: 17px;
     height: 30px;
+    border: 1px solid rgb(184, 179, 179);
+    border-radius: 15px;
+    padding-left: 15px;
     cursor: pointer;
+}
+#search:focus{
+    border-radius: 15px;
+    outline: none;
 }
 #fullscreen {
     width: 20px;
@@ -68,8 +81,9 @@ body{
     display: none;
     position: absolute;
     list-style: none;
-    background-color: #f1f1f1;
+    background-color: lightgray;
     min-width: 120px;
+    border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .language_list ul {
@@ -79,7 +93,12 @@ body{
     padding: 5px;
 }
 .language_list ul li{
+    padding: 4px;
+    border-radius: 5px;
     cursor: pointer;
+}
+.language_list ul li:hover{
+    background-color:#6658dd;
 }
 .language_name{
     font-size: 18px;
@@ -104,7 +123,8 @@ body{
     display: none;
     position: absolute;
     list-style: none;
-    background-color: #f1f1f1;
+    background-color: lightgray;
+    border-radius: 5px;
     min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -115,7 +135,15 @@ body{
     padding: 5px;
 }
 .user_demo_list ul li{
+    padding: 5px;
+    font-size: 18px;
     cursor: pointer;
+}
+.user_demo_list ul li:hover{
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(191, 187, 187);
 }
 .user_demo_list ul li a{
     text-decoration: none;
