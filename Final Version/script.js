@@ -114,7 +114,6 @@ document.querySelector("#user_demo").addEventListener("click", () => {
     user_demo_list.classList.toggle("show");
     user_demo_list.style.top = `${user_demo.offsetTop + user_demo.offsetWidth / 2}px`;
     user_demo_list.style.left = `${user_demo.offsetLeft - user_demo.offsetHeight / 2}px`;
-    console.log(user_demo.classList.contains("show"));
     if (user_demo_list.classList.contains("show")) {
         user_demo.querySelector(".fas").classList.replace("fa-caret-down", "fa-caret-up");
     } else {
