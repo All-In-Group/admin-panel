@@ -2,13 +2,30 @@ html, body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color:  rgb(202, 202, 202);
+    background-color: rgb(202, 202, 202);
     height: 100%;
     width: 100%;
+}
+@media (max-width: 1250px) {
+    body #main_content{
+        height: max-content;
+    }
+    body #left_menu_selector{
+        border-radius: 0 0 5px 5px;
+        height: max-content;
+    }
+    body .menu_open{
+        border-radius: 0 0 5px 5px;
+        height: max-content;
+    }
 }
 @media (max-width: 1024px) {
     .nav_list_left_all{
         display: none;
+    }
+    body #main_content{
+        height: max-content;
+        margin-left: 25px;
     }
 }
 @media (max-width: 768px) {
@@ -17,6 +34,16 @@ html, body{
     }
     #logo{
         display: none;
+    }
+    body .menu_open{
+        position: absolute;
+        z-index: 1;
+    }
+    body #left_menu{
+        display: none;
+    }
+    body #main_content{
+        margin: 30px 30px;
     }
 }
 
@@ -169,9 +196,7 @@ a:active{
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
-    width: 10%;
     height: 100%;
-    margin-left: 0;
 }
 #left_menu_selector{
     background-color: #6658dd;
@@ -183,7 +208,6 @@ a:active{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    align-items: stretch;
 }
 
 .left_menu_selector_item{
@@ -204,11 +228,11 @@ a:active{
 
 .menu_open{
     display: none;
-    width: 80%;
-    min-width: 130%;
+    width: 250px;
+    min-width: 250px;
     height: 100%;
-    background-color: white;
     padding: 10px;
+    background-color: white;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -255,6 +279,7 @@ a:active{
 .menu li a{
     text-decoration: none;
     margin: 5px;
+    cursor: pointer;
 }
 
 .title{
@@ -277,10 +302,9 @@ a:active{
     display: none;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 40px 40px 0px 150px;
-    margin-left: 200px;
-    width: 80%;
-    max-width: 80%;
+    margin: 40px 40px 0px 50px;
+    width: 90%;
+    max-width: 90%;
     height: 600px;
     background-color: white;
     border-radius: 5px;
@@ -381,14 +405,14 @@ a:active{
 .grafics{
     display: none;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
-    align-items: space-around;
 }
-#grafic_4{
-    margin-top: 30px;
+
+.grafics_box{
+    margin: 20px;
 }
 
 .show{
