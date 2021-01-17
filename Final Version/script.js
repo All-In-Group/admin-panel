@@ -127,14 +127,17 @@ document.querySelector("#edit_head").parentElement.addEventListener("click", () 
     document.querySelector("#user_edit_form").style.display = "none";
     document.querySelector("#main_content").style.display = "flex";
     document.querySelector("#user_edit_box").style.display = "block";
+    document.querySelector("#user_info_edit_btns").style.display = "flex";
     document.querySelector("#user_info_edit_btn").textContent = "Update";
     document.querySelector("#user_info_close_btn").textContent = "Close";
+    document.querySelector(".grafics").style.display = "none";
 });
 
 document.querySelector("#user_info_close_btn").addEventListener("click", e => {
     if (e.target.textContent == "Close") {
         document.querySelector("#main_content").style.display = "none";
-        document.querySelector("#user_info_close_btn").textContent = "Back";
+        document.querySelector("#user_edit_box").style.display = "none";
+        document.querySelector("#user_info_edit_btns").style.display = "none";
     }
     else if (e.target.textContent == "Back") {
         document.querySelector("#user_edit_form").style.display = "none";
@@ -172,6 +175,23 @@ document.querySelector("#user_info_edit_btn").addEventListener("click", e => {
     }
 
 });
+
+// Dashboard 1 lib/grafic.js
+
+document.querySelector("#dashboard_1").addEventListener("click", () => {
+    document.querySelector("#user_edit_form").style.display = "none";
+    document.querySelector("#user_edit_box").style.display = "none";
+    document.querySelector("#user_info_edit_btns").style.display = "none";
+    document.querySelector("#main_content").style.display = "flex";
+    document.querySelector(".grafics").style.display = "flex";
+});
+
+createGraf("#grafic_1", grafic_2_data);
+createGraf("#grafic_2", grafic_3_data);
+createGraf("#grafic_3", grafic_4_data);
+createGraf("#grafic_4", grafic_1_data);
+createGraf("#grafic_5", grafic_5_data);
+createGraf("#grafic_6", grafic_6_data);
 
 // all 
 
