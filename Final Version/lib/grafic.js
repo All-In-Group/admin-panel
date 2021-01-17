@@ -46,7 +46,7 @@ let grafic_2_data = {
         }
     }
 };
-var grafic_3_data = {
+let grafic_3_data = {
     series: [{
         data: [4, 12, 30, 58, 79]
     }],
