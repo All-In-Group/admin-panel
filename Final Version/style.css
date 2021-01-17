@@ -7,10 +7,19 @@ html, body{
     width: 100%;
 }
 @media (max-width: 1024px) {
-    body #nav_container{
-        flex-flow: column;
+    .nav_list_left_all{
+        display: none;
     }
-  }
+}
+@media (max-width: 768px) {
+    #search{
+        display: none;
+    }
+    #logo{
+        display: none;
+    }
+}
+
 a:active{
     color:#4a3bc9;
 }
@@ -63,7 +72,10 @@ a:active{
     border: 1px solid rgb(184, 179, 179);
     border-radius: 15px;
     padding-left: 15px;
-    cursor: pointer;
+    background-image: url('Images/search.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    outline: 0;
 }
 #search:focus{
     border-radius: 15px;
@@ -277,7 +289,7 @@ a:active{
 }
 
 /* user edit */
-#user_edit_box{
+#user_edit_box {
     display: none;
 }
 
@@ -334,7 +346,7 @@ a:active{
 }
 
 #user_info_edit_btns{
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
@@ -362,6 +374,21 @@ a:active{
 
 .user_info_btns:active{
     background-color:  #4237a9;
+}
+
+/*grafics box*/
+
+.grafics{
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: space-around;
+}
+#grafic_4{
+    margin-top: 30px;
 }
 
 .show{
