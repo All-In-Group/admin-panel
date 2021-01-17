@@ -18,18 +18,19 @@
         </div>
         <div id="nav_container">
             <div id="left_nav">
+                <ul>
+
+                </ul>
                 <ul id="nav_list_left" class="nav_list">
-                    <li id="company">Company</li>
                     <li id="menu_close_icon"><i class="fas fa-bars"></i></li>
-                    <li>Create New <i class="fas fa-caret-down"></i></li>
-                    <li>Mega Menu <i class="fas fa-caret-down"></i></li>
+                    <li class="nav_list_left_all">Create New <i class="fas fa-caret-down"></i></li>
+                    <li class="nav_list_left_all">Mega Menu <i class="fas fa-caret-down"></i></li>
                 </ul>
             </div>
             <div id="right_nav">
                 <ul id="nav_list_right" class="nav_list">
                     <li>
                         <input id="search" type="text" placeholder="Search..">
-                        <i class="fa fa-search"></i>
                     </li>
                     <li><img id="fullscreen" src="Images/fs_open.svg"></li>
                     <li><img id="language" class="language_flag_img" src="Images/Flag_USA.svg" alt="USA">
@@ -84,7 +85,7 @@
 
                 <ul id="dashboard_menu" class="menu">
                     <h3 class="title">Dashboards</h3>
-                    <li><a href="#">Dashboard 1</a></li>
+                    <li><a id="dashboard_1">Dashboard 1</a></li>
                     <li><a href="#">Dashboard 2</a></li>
                     <li><a href="#">Dashboard 3</a></li>
                     <li><a href="#">Dashboard 4</a></li>
@@ -331,10 +332,20 @@
                 <div id="user_info_edit_btn" class="user_info_btns">Update</div>
                 <div id="user_info_close_btn" class="user_info_btns">Close</div>
             </div>
+            <div class="grafics">
+                <div id="grafic_1" class="grafics_box"></div>
+                <div id="grafic_2" class="grafics_box"></div>
+                <div id="grafic_3" class="grafics_box"></div>
+                <div id="grafic_4" class="grafics_box"></div>
+                <div id="grafic_5" class="grafics_box"></div>
+                <div id="grafic_6" class="grafics_box"></div>
+            </div>
         </div>
 
     </div>
-
+    <script src=" https://cdn.jsdelivr.net/npm/apexcharts">
+    </script>
+    <script src="lib/grafic.js"></script>
     <script src="script.js"></script>
 </body>
 
