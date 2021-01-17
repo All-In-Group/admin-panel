@@ -1,3 +1,4 @@
+const leftMenu = document.querySelector("#left_menu");
 const leftMenuIcons = document.querySelectorAll('.left_menu_selector_item');
 const menu_close_icon = document.querySelector("#menu_close_icon");
 const menuOpen = document.querySelector('.menu_open');
@@ -27,17 +28,22 @@ leftMenuIcons.forEach((element => {
 // menu close button
 
 menu_close_icon.addEventListener("click", () => {
-    if (!menuOpen.classList.contains("show")) {
-        menuOpen.classList.add('show');
+    let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let value = window.getComputedStyle(leftMenu, null).display;
+
+    if (width <= 600) {
+        menuOpen.classList.remove("show");
+        !(value === "flex") ? leftMenu.style.display = "flex" : leftMenu.style.display = "none";
     } else {
-        menuOpen.classList.remove('show');
+        leftMenu.style.display = "flex";
+        (!(menuOpen.classList.contains("show"))) ? menuOpen.classList.add("show") : menuOpen.classList.remove("show");
     }
 });
 
 // Left Menu DropDowns
 
 leftMenuDrops.forEach(dropElement => {
-    dropElement.addEventListener('click', (e) => {
+    dropElement.addEventListener('click', () => {
         let dropItem = dropElement.querySelector(".drop");
         let dropItemIcon = dropElement.querySelector(".fas");
         if (!dropItem.classList.contains("show")) {
@@ -74,11 +80,7 @@ function toggleFullScreen() {
 }
 
 document.querySelector("#fullscreen").addEventListener("click", e => {
-    if (window.innerHeight == screen.height) {
-        e.target.src = "Images/fs_open.svg";
-    } else {
-        e.target.src = "Images/fs_close.svg";
-    }
+    (window.innerHeight === screen.height) ? e.target.src = "Images/fs_open.svg" : e.target.src = "Images/fs_close.svg";
     toggleFullScreen();
 }, false);
 
