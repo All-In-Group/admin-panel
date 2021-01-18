@@ -6,8 +6,13 @@ html, body{
     height: 100%;
     width: 100%;
 }
+@media (max-width: 1500px) {
+    body .main_content{
+        height: max-content;
+    }
+}
 @media (max-width: 1250px) {
-    body #main_content{
+    body .main_content{
         height: max-content;
     }
     body #left_menu_selector{
@@ -23,7 +28,7 @@ html, body{
     .nav_list_left_all{
         display: none;
     }
-    body #main_content{
+    body .main_content{
         height: max-content;
         margin-left: 25px;
     }
@@ -37,13 +42,18 @@ html, body{
     }
     body .menu_open{
         position: absolute;
+        left:60px;
         z-index: 1;
     }
     body #left_menu{
         display: none;
     }
-    body #main_content{
+    body .main_content{
         margin: 30px 30px;
+    }
+    body #user_img_edit_box{
+        display: block;
+        margin: 20px auto;
     }
 }
 
@@ -99,7 +109,7 @@ a:active{
     border: 1px solid rgb(184, 179, 179);
     border-radius: 15px;
     padding-left: 15px;
-    background-image: url('Images/search.jpg');
+    background-image: url("Images/search.jpg");
     background-repeat: no-repeat;
     background-position: right center;
     outline: 0;
@@ -298,7 +308,7 @@ a:active{
     height: 90%;
 }
 
-#main_content{
+.main_content{
     display: none;
     justify-content: flex-start;
     flex-direction: column;
@@ -315,11 +325,34 @@ a:active{
 /* user edit */
 #user_edit_box {
     display: none;
+    height: 90%;
 }
 
+.upload_btn{
+   background-color: #6658dd;
+   color: white;
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.upload_btn:hover{
+    background-color: #8d83e9;
+}
+
+.upload_btn:active{
+    background-color:  #4237a9;
+}
+
+#user_img_edit_box{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 45%;
+}
 
 #user_img_edit{
-    margin: 0 auto;
     width: 150px;
     height: 150px;
     border:3px solid black;
@@ -334,9 +367,9 @@ a:active{
 }
 
 #user_info{
-    width: 700px;
+    display: inline-block;
+    width: 300px;
     height: 370px;
-    margin: 0 auto;
     font-size: 20px;
 }
 
@@ -403,11 +436,29 @@ a:active{
 /*grafics box*/
 
 .grafics{
-    display: none;
+    display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    height: 100%;
+}
+
+/* activity table */
+
+#activity_table_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* translations table */
+
+#translations_table_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -417,4 +468,7 @@ a:active{
 
 .show{
     display: block;
+}
+.show_flex{
+    display: flex;
 }
