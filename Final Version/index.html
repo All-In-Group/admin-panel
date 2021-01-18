@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
     <title>Panel</title>
 </head>
 
@@ -58,7 +60,7 @@
         </div>
         <div id="user_demo_list" class="user_demo_list">
             <ul style="text-align: center;">
-                <li><a href="#">Settings</a></li>
+                <li><a id="activity_head" href="#">Activity</a></li>
                 <li><a id="edit_head" href="#">Edit</a></li>
                 <li><a href="#">Out</a></li>
             </ul>
@@ -82,13 +84,18 @@
             </div>
 
             <div class="menu_open">
-
                 <ul id="dashboard_menu" class="menu">
                     <h3 class="title">Dashboards</h3>
                     <li><a id="dashboard_1">Dashboard 1</a></li>
                     <li><a href="#">Dashboard 2</a></li>
                     <li><a href="#">Dashboard 3</a></li>
                     <li><a href="#">Dashboard 4</a></li>
+
+                    <li class="drop_active"><a href="#">Main Info</a><i class="fas fa-caret-down"></i>
+                        <ul class="drop">
+                            <li><a id="main_info_translations" href="#">Translations</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <ul id="apps_menu" class="menu">
@@ -184,7 +191,7 @@
                     <li><a href="#">Timeline</a></li>
                     <li><a href="#">Sitemap</a></li>
                     <li><a href="#">Invoice</a></li>
-                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">FAQ"s</a></li>
                     <li><a href="#">Search Results</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Maintanance</a></li>
@@ -282,10 +289,17 @@
             </div>
 
         </div>
-        <div id="main_content">
+
+        <div class="main_content" name="user_edit">
             <div id="user_edit_box">
-                <div id="user_img_edit">
-                    <img id="user_img_edit_img" src="Images/ex_user_img.jpg">
+                <div id="user_img_edit_box">
+                    <div id="user_img_edit">
+                        <img id="user_img_edit_img" src="Images/ex_user_img.jpg">
+                    </div>
+                    <div id="upload">
+                        <input type="file" id="upload_btn" accept="image/*" onchange="loadFile(event)" hidden />
+                        <label for="upload_btn" class="upload_btn">Change image</label>
+                    </div>
                 </div>
                 <div id="user_info">
                     <h3>User Info</h3>
@@ -332,6 +346,9 @@
                 <div id="user_info_edit_btn" class="user_info_btns">Update</div>
                 <div id="user_info_close_btn" class="user_info_btns">Close</div>
             </div>
+        </div>
+
+        <div class="main_content" name="grafics">
             <div class="grafics">
                 <div id="grafic_1" class="grafics_box"></div>
                 <div id="grafic_2" class="grafics_box"></div>
@@ -342,9 +359,25 @@
             </div>
         </div>
 
+        <div class="main_content" name="activity">
+            <div id="activity_table_box">
+                <div id="activity_table">
+                </div>
+            </div>
+        </div>
+
+        <div class="main_content" name="translations">
+            <div id="translations_table_box">
+                <div id="translations_table">
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/apexcharts">
     </script>
+    <script src="lib/table.js"></script>
     <script src="lib/grafic.js"></script>
     <script src="script.js"></script>
 </body>
