@@ -22,7 +22,10 @@ leftMenuIcons.forEach((element => {
         activeLeftMenu.forEach(e => e.classList.remove("show"));
         let activeElement = `${element.id}_menu`;
         document.querySelector(`#${activeElement}`).classList.add("show");
-
+        document.querySelector(`#${activeElement}`).querySelectorAll(".drop").forEach(e => {
+            e.classList.remove("show");
+            e.parentElement.querySelectorAll(".fas").forEach(e => e.classList.replace("fa-caret-up", "fa-caret-down"));
+        });
     });
 }));
 
@@ -202,6 +205,29 @@ createGraf("#grafic_4", grafic_1_data);
 createGraf("#grafic_5", grafic_5_data);
 createGraf("#grafic_6", grafic_6_data);
 
+// Dashboard 2
+
+document.querySelector("#dashboard_2").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "dashboard_2") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
+createGraf("#dashboard_2_content", dashboard_2_data);
+
+// Dashboard 3
+
+document.querySelector("#dashboard_3").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "dashboard_3") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
+createGraf("#dashboard_3_content", dashboard_3_data);
+
+// Dashboard 4
+
+document.querySelector("#dashboard_4").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "dashboard_4") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
+createGraf("#dashboard_4_content", dashboard_4_data);
 
 // main info -> translations
 
