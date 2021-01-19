@@ -76,6 +76,35 @@ let countries = [
     { Name: "United Kingdom", Id: 3 }
 ];
 
+let products_all_data = [
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+    { "Image": "Images/Flag_USA.svg", "Name": "USA Flag", "Price": "5$", "Status": "Active" },
+    { "Image": "Images/Flag_of_Russia.svg", "Name": "Russia Flag", "Price": "4$", "Status": "Active" },
+];
+
+//activity table
+
 $("#activity_table").jsGrid({
     width: "80%",
     height: "500px",
@@ -92,6 +121,8 @@ $("#activity_table").jsGrid({
     ]
 });
 
+//translations table
+
 $("#translations_table").jsGrid({
     width: "80%",
     height: "500px",
@@ -104,5 +135,30 @@ $("#translations_table").jsGrid({
         { name: "id", type: "text", width: 150 },
         { name: "key", type: "number", width: 50 },
         { name: "value", type: "text", width: 200 }
+    ]
+});
+
+//products all table
+
+let products_all_update = $("#products_all_table").DataTable({
+    data: products_all_data,
+    columns: [
+        { data: "Status" },
+        { data: "Image" },
+        { data: "Name" },
+        { data: "Price" },
+        { data: "Status" }
+    ],
+    "lengthMenu": [8],
+    "fnCreatedRow": function (row, data, index) {
+        $('td', row).eq(0).html(index + 1);
+    },
+    columnDefs: [
+        {
+            targets: 1,
+            render: function (data) {
+                return `<img src="${data}" class="products_all_table_img" />`
+            }
+        }
     ]
 });
