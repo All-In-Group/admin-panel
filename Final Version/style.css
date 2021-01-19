@@ -21,7 +21,7 @@ html, body{
     }
     body .menu_open{
         border-radius: 0 0 5px 5px;
-        height: max-content;
+        height: 80%;
     }
 }
 @media (max-width: 1024px) {
@@ -241,7 +241,7 @@ a:visited{
     padding: 10px;
 }
 
-.active{
+.active{ 
     background-color: #9086ec;
 }
 
@@ -269,7 +269,7 @@ a:visited{
     background: #6658dd; 
   }
 .menu_open::-webkit-scrollbar-thumb:hover {
-    background: #9086ec; 
+    background: #9086ec;
   }
 
 .menu{
@@ -431,7 +431,6 @@ a:visited{
     width: 90px;
     height: 30px;
     margin: auto 10px;
-    text-align: center;
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
@@ -477,6 +476,39 @@ a:visited{
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+/* products table */
+
+#products_all_box{
+    height: 90%;
+}
+
+#products_all_table{
+    height: 450px;
+    text-align: center;
+}
+
+.products_all_table_img{
+    width: 50px;
+    height: 35px;
+}
+
+/* products add */
+
+#products_add_form_box{
+    margin: 20px;
+}
+
+.products_add_form_text{
+    display: inline-block;
+    font-size: 20px;
+    width: 100px;
+}
+
+.products_add_form_input{
+    height: 25px;
+    margin: 5px;
 }
 
 .grafics_box{
