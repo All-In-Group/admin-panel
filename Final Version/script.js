@@ -235,6 +235,41 @@ document.querySelector("#main_info_translations").addEventListener("click", () =
     main_content.forEach(e => { (e.getAttribute("name") === "translations") ? e.style.display = "flex" : e.style.display = "none" });
 });
 
+// Products
+
+document.querySelector("#products_all").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "products_all") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
+document.querySelector("#products_add").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "products_add") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
+document.querySelector("#products_add_btn").addEventListener("click", () => {
+
+    let products_add_url = document.forms.products_add_form.url.value;
+    let products_add_name = document.forms.products_add_form.name.value;
+    let products_add_price = document.forms.products_add_form.price.value;
+
+    products_all_data.unshift({ "Image": `${products_add_url}`, "Name": `${products_add_name}`, "Price": `${products_add_price}`, "Status": "Active" });
+});
+
+document.querySelector("#products_all_update").addEventListener("click", () => {
+    products_all_update.clear().draw();
+    products_all_update.rows.add(products_all_data);
+    products_all_update.columns.adjust().draw();
+});
+
+// Services
+
+document.querySelector("#services_all").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "services_all") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
+document.querySelector("#services_add").addEventListener("click", () => {
+    main_content.forEach(e => { (e.getAttribute("name") === "services_add") ? e.style.display = "flex" : e.style.display = "none" });
+});
+
 // upload user image
 
 const loadFile = function (event) {
@@ -253,12 +288,3 @@ window.onclick = function (event) {
         document.querySelector("#user_demo").querySelector(".fas").classList.replace("fa-caret-up", "fa-caret-down");
     }
 }
-
-// main_content.forEach(e => { (e.getAttribute("name") === "grafics") ? e.style.display = "flex" : e.style.display = "none" });
-/*
-    main_content.forEach( e => {--------------------------------------------------- Ֆռռում ա բոլոր main_content-ների վրայով
-        if (e.getAttribute("name") === "grafics") {e.style.display = "flex"} ------ միացնում ա միայն իրա կոնտենտը
-        else {e.style.display = "none"} ------------------------------------------- անջատում ա մնացած բոլորը
-    });
-
-*/
